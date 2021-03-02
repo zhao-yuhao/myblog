@@ -1,0 +1,26 @@
+{{ if .Site.Params.enableFooterSubscription }}
+    <div class="subscription-box">
+        {{ replace (index $.Site.Data.SVG $.Site.Params.subscriptionIcon) "icon" "icon subscription-icon" | safeHTML }}
+        <div class="subscription-hover">
+            <img class="subscription-qrcode" src="{{ .Site.Params.subscriptionQrCode }}" alt="Wechat" />
+            <div class="subscription-description">{{ i18n "subscription" }}</div>
+        </div>
+    </div>
+{{ end }}
+
+<div style="width:300px;margin:0 auto; padding:20px 0;">
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602011579" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/grs.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33010602011579号</p></a>
+</div>
+
+
+<!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<text class="poem_sentence"></text>
+<text class="poem_info"></text>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+    var sentence = document.querySelector(".poem_sentence")
+    var info = document.querySelector(".poem_info")
+    sentence.innerHTML = result.data.content
+    info.innerHTML = '——' + result.data.origin.author
+  });
+</script> -->
