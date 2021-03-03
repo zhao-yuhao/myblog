@@ -2,7 +2,14 @@
 title = "天目山路所遇"
 description = "一些生活碎片"
 date = "2021-03-03T10:34:09+08:00"
+
+lastmod = "2021-03-03T11:17:20+08:00"
+
 tags = ["literature","zju"]
+
+indent = true 
+
+dropCap = false
 
 +++
 
