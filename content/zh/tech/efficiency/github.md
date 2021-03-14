@@ -32,4 +32,4 @@ git commit -m 'description'
 
 ## 基本操作
 
-![git-command.png](/images/git-command.png "Git·常用命令")
+![git-command.jpg](/images/git-command.jpg "Git·常用命令")
