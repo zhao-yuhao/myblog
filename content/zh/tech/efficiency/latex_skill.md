@@ -36,3 +36,10 @@ tags = ["research","latex"]
 \Huge
 ```
 
+3、有时候需要在标题以及其他难以修改模板文件的地方进行换行，会出现奇怪的错误，比如说在VLDB的模板的标题换行时，如果使用\newline命令，会导致上一行不再是中心对齐，而使用\\\命令会导致无法换行，这个时候改怎么办呢？
+
+```latex
+# you can use ~ to ensure that certain words stay grouped together. 
+\title{An~AUV~Simulator~for~Incorporating Physical~Feedback}
+```
+
