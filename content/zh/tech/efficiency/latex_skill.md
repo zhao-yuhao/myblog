@@ -15,6 +15,8 @@ tags = ["research","latex"]
 ![latex-phototext.png](/images/latex-phototext.png "LaTeX·图文并排")
 
 ```latex
+\usepackage{wrapfig}
+
 \begin{wrapfigure}{r}{3.5cm}
 \includegraphics[width=3.5cm]{figures/path.eps}
 \caption{description.}\label{fig:example}
