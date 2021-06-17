@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Διαψαλματα 间奏曲</title>
+        <link>https://zcnoke.com/</link>
+        <description>Yuhao Zhao&#39;s Blog</description>
+        <generator>Hugo 0.80.0 https://gohugo.io/</generator>
+        
+            <language>zh-CN</language>
+        
+        
+            <managingEditor>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</managingEditor>
+        
+        
+            <webMaster>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</webMaster>
+        
+        
+            <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+        
+        <lastBuildDate>Thu, 17 Jun 2021 17:17:30 &#43;0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://zcnoke.com/rss.xml" />
+        
+        
+            <item>
+                <title>Linux 常用命令</title>
+                <link>https://zcnoke.com/tech/efficiency/linux_command/</link>
+                <guid isPermaLink="true">https://zcnoke.com/tech/efficiency/linux_command/</guid>
+                <pubDate>Sat, 13 Mar 2021 13:09:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;1、修改文件名：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mv old_name new_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;修改文件夹名：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mv old_name/ new_name/
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;同时，mv命令还能够移动文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mv filename new_directory/filename
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;2、搜索文件或文件夹的方法&lt;/p&gt;
+&lt;p&gt;用于程序名的搜索：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;whereis filename
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;指定目录下遍历查找：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;find /directory -name filename
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;find是在指定的目录下遍历查找，如果目录使用 / 则表示在所有目录下查找，find方式查找文件消耗资源比较大，速度也慢一点。&lt;/p&gt;
+&lt;p&gt;在Linux文件系统内查找：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;locate filename
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Linux会把系统内所有的文件都记录在一个数据库文件中，使用locate + 文件名的方法会在Linux系统维护的这个数据库中去查找目标，相比于find命令效率会更高。&lt;/p&gt;
+&lt;p&gt;但此数据库并非实时更新，可以使用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;updatedb
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;进行更新，以保证结果的正确性&lt;/p&gt;
+&lt;p&gt;使用如下命令查找可执行文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;which executable_file
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/tech/efficiency/">tech\efficiency\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/research/">科研</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/linux/">Linux</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Git使用技巧</title>
+                <link>https://zcnoke.com/tech/efficiency/github/</link>
+                <guid isPermaLink="true">https://zcnoke.com/tech/efficiency/github/</guid>
+                <pubDate>Thu, 11 Mar 2021 20:40:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;一直都不太会使用Git，但是对于一名计算机从业者来说，Git是非常重要的工具，因此利用近期需要整理代码的契机，下决心学会使用Git。&lt;/p&gt;
+&lt;h2 id=&#34;开始&#34;&gt;开始&lt;/h2&gt;
+&lt;p&gt;首先应该学会如何创建Git仓库：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git init
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;上述命令会使得当前目录作为Git仓库，使用如下命令表示对filename进行追踪：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git add filnname
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;使用如下命令进行提交：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;description&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;基本操作&#34;&gt;基本操作&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://zcnoke.com/images/git-command.jpg&#34; alt=&#34;git-command.jpg&#34; title=&#34;Git·常用命令&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/tech/efficiency/">tech\efficiency\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/research/">科研</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/github/">GitHub</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>天目山路所遇</title>
+                <link>https://zcnoke.com/life/enter/tianmushan/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/enter/tianmushan/</guid>
+                <pubDate>Wed, 03 Mar 2021 10:34:09 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;h2 id=&#34;天目山路所遇&#34;&gt;天目山路所遇&lt;/h2&gt;
+&lt;p&gt;回寝室的路上，骑自行车在天目山路教工路口等红绿灯，忽然发现前面有一只猫一颤一颤地开始横穿马路。看起来，它应该流浪非常久了，正当我看着它是否能够顺利过马路时，一只狗摇摇摆摆地跟在后面，出现在我的视线当中。恰好这时，直行红灯，左转弯绿灯。我向左转弯驶去，在快到路中央时，我忽然担心起这一猫一狗来，转头一看他们已经走过马路，扬长而去。耳机旁忽然响起了鸣笛声，一瞬间以为自己会被撞，鲁莽的我，难道今天要接受惩罚了吗？最终只是我的错觉，可能只是远处传来的汽车鸣笛声，由于Airpods的机制造成了由远而近的音效。虚惊一场的我回想起这一猫一狗，好似两位耆耄老人，它们今晚会居于何方，我一直听说天目山路的尽头是天目山，它们会走到天目山吗？&lt;/p&gt;
+&lt;h2 id=&#34;玉古路&#34;&gt;玉古路&lt;/h2&gt;
+&lt;p&gt;早上骑自行车经过玉古路那个桥时，发现一个老爷爷坐在桥旁边的可能是输气管道上，这个输气管道外面有铁框框住，由于快要迟到了，便赶紧骑车离开了这块地方。回想一下，当时的场面非常的有意境，江南小河旁边的花儿鸟儿都已苏醒，早春时节，尽管太阳隐藏在白云之后，但也是一日之最有活力的时候。希望这位老人也能如同今日一样，开启人生第二春。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/enter/">life\enter\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/literature/">文学</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/zju/">浙里</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>2021年读书记录</title>
+                <link>https://zcnoke.com/life/school/read/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/school/read/</guid>
+                <pubDate>Tue, 02 Mar 2021 19:45:28 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;时常会忘记自己正在读什么书，或者是已经读过什么书。因此，记录下来是非常重要的一件事情。这个帖子专门用于记录2021年我所读过或者在读或者正打算读的书籍。&lt;/p&gt;
+&lt;p&gt;已经读过的书籍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《红楼梦》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正在阅读的书籍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《卡夫卡小说全集》&lt;/li&gt;
+&lt;li&gt;《维特根斯坦传——天才为之责任》&lt;/li&gt;
+&lt;li&gt;《宋词鉴赏辞典》&lt;/li&gt;
+&lt;li&gt;《唐诗鉴赏辞典》&lt;/li&gt;
+&lt;li&gt;《剑桥中国隋唐史》&lt;/li&gt;
+&lt;li&gt;《毛泽东文集》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;想要阅读的书籍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《普通语言学教程》&lt;/li&gt;
+&lt;li&gt;《荷马史诗》&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/school/">life\school\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/literature/">文学</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/zju/">浙里</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>LaTeX--奇技淫巧</title>
+                <link>https://zcnoke.com/tech/efficiency/latex_skill/</link>
+                <guid isPermaLink="true">https://zcnoke.com/tech/efficiency/latex_skill/</guid>
+                <pubDate>Sat, 06 Feb 2021 14:47:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;在日常的科研生活当中，我们需要经常接触LaTeX，LaTeX是一种排版语言，“所思即所得”，非常的方便。学习成本较低，掌握了必要的命令，借助于模板，能够非常快的上手，但对于一些技巧，有时候难以利用查到，因此需要记录下来以备未来查看。&lt;/p&gt;
+&lt;p&gt;1、如何插入图片，达到如下图的图文并排的效果？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://zcnoke.com/images/latex-phototext.png&#34; alt=&#34;latex-phototext.png&#34; title=&#34;LaTeX·图文并排&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;wrapfig&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;wrapfigure&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;r&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;3.5cm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\includegraphics&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[width=3.5cm]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figures/path.eps&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;description.&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\label&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fig:example&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;wrapfigure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;2、控制字体大小&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\tiny&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\scriptsize&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\footnotesize&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\small&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\normalsize&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\large&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\Large&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\LARGE&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\huge&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\Huge&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;3、有时候需要在标题以及其他难以修改模板文件的地方进行换行，会出现奇怪的错误，比如说在VLDB的模板的标题换行时，如果使用\newline命令，会导致上一行不再是中心对齐，而使用\\命令会导致无法换行，这个时候改怎么办呢？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;# you can use ~ to ensure that certain words stay grouped together. 
+&lt;span class=&#34;k&#34;&gt;\title&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;An~AUV~Simulator~for~Incorporating Physical~Feedback&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/tech/efficiency/">tech\efficiency\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/research/">科研</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/latex/">LaTeX</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>金陵十二钗判词</title>
+                <link>https://zcnoke.com/life/redchamber/twelve_beauties/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/redchamber/twelve_beauties/</guid>
+                <pubDate>Fri, 05 Feb 2021 14:16:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;记录金陵十二钗判词，以便于之后的阅读。&lt;/p&gt;
+&lt;p&gt;薛宝钗、林黛玉&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可叹停机德，堪怜咏絮才。&lt;/p&gt;
+&lt;p&gt;玉带林中挂，金簪雪里埋。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;贾元春&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二十年来辨是非，榴花开处照宫闱。&lt;/p&gt;
+&lt;p&gt;三春争及初春景，虎兔相逢大梦归。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;贾探春&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;才自精明志自高，生于末世运偏消。&lt;/p&gt;
+&lt;p&gt;清明涕送江边望，千里东风一梦遥。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;史湘云&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;富贵又何为，襁褓之间父母违。&lt;/p&gt;
+&lt;p&gt;展眼吊斜晖，湘江水逝楚云飞。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;妙玉&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;欲洁何曾洁，云空未必空。&lt;/p&gt;
+&lt;p&gt;可怜金玉质，终陷淖泥中！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;贾迎春&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;子系中山狼，得志便猖狂。&lt;/p&gt;
+&lt;p&gt;金闺花柳质，一载赴黄粱。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;贾惜春&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;勘破三春景不长，缁衣顿改昔年装。&lt;/p&gt;
+&lt;p&gt;可怜绣户侯门女，独卧青灯古佛旁。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;王熙凤&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;凡鸟偏从末世来，都知爱慕此生才。&lt;/p&gt;
+&lt;p&gt;一从二令三人木，哭向金陵事更哀。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;巧姐&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;势败休云贵，家亡莫论亲。&lt;/p&gt;
+&lt;p&gt;偶因济刘氏，巧得遇恩人。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;李纨&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;桃李春风结子完，到头谁似一盆兰。&lt;/p&gt;
+&lt;p&gt;如冰水好空相妒，枉与他人作笑谈！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;秦可卿&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;情天情海幻情身，情既相逢必主淫。&lt;/p&gt;
+&lt;p&gt;漫言不肖皆荣出，造衅开端实在宁。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/redchamber/">life\redchamber\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/redchamber/">红楼</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/literature/">文学</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>成语学习</title>
+                <link>https://zcnoke.com/life/school/fang/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/school/fang/</guid>
+                <pubDate>Thu, 04 Feb 2021 21:10:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;今日开组会的时候，忽然被cue到，由于我和师兄听到了一句话，相视而笑。被老板当场抓住，并质询我们为何而笑。临场忽然想到应该开专帖记录一部分成语以及专用熟语。现记录如下：&lt;/p&gt;
+&lt;p&gt;指温为台&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;含义：形容指着温州男人说我最喜欢台州男人&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;空空导弹&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;含义：形容只会空对空，言之无物，毫无update可言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;做做人事&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;含义：形容PPT做的不好，或者进度不够&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;说说人话&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;含义：指承认自己做的不好，以后还需加倍努力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;明确目标&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;含义：指明确年度计划，比如几篇SIGMOD或几篇VLDB&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;啪啪打脸&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;含义：形容说好的目标却没有完成&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;笑嘻嘻房某某嘻嘻笑、喜盈盈赵某某盈盈喜&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;含义：指房某某与赵某某在组会上相视一笑，被老板当场抓住并询问原由&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/school/">life\school\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/go/">go语言</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/zju/">浙里</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>DBL实验室老博封号篇</title>
+                <link>https://zcnoke.com/life/school/dblab/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/school/dblab/</guid>
+                <pubDate>Thu, 04 Feb 2021 12:51:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;实验室的老博均喜获封号一枚，特此记录。&lt;/p&gt;
+&lt;p&gt;我要减肥大师姐&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大师姐的年度flag&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;台州男人杨某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：他最爱台州男人，指温州男人为台州男人&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;脚踩瓜皮葛某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：脚踩西瓜皮走到哪就到哪，形容年度计划定得不好&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;养尊处优房某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：不抽筋剥皮，熬tm十几个夜暴瘦的，都是养尊处优&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;废话少说金某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：直指要害，才是他喜欢的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;总有理由朱某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：他打电话来时，不是在洗衣服就是在拿快递或是在如厕&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;摘下口罩赵某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：后疫情时代，严格遵守疫情防控&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;做事靠谱赵某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：近期被他称为做事靠谱，可能未来就是总是犯贱赵某某&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;广东靓仔邱某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：来自广东的大帅哥&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;归属感低郭某某&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;典故：还未入学的小师弟时常发出归属感低的感叹&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/school/">life\school\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/go/">go语言</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/zju/">浙里</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Go language：go语言专栏</title>
+                <link>https://zcnoke.com/life/school/go/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/school/go/</guid>
+                <pubDate>Sat, 30 Jan 2021 11:15:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;Go 语言影响深远，是浙江大学DBL实验室所有科研人员所喜闻乐见使用的一门语言。此贴专用于记录常用Go 语言。&lt;/p&gt;
+&lt;p&gt;1.30&lt;/p&gt;
+&lt;p&gt;要干出一个是人干出来的事情。&lt;/p&gt;
+&lt;p&gt;你还没断奶是吧？&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/school/">life\school\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/go/">go语言</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/zju/">浙里</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>江城的春天</title>
+                <link>https://zcnoke.com/life/hzau/sping_of_wuhan/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/hzau/sping_of_wuhan/</guid>
+                <pubDate>Thu, 13 Feb 2020 22:10:31 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;二〇一九年的冬天这样的长，长到好像不会再过去了一样。&lt;/p&gt;
+&lt;p&gt;二零一七年的某个春日午后，外面的雨声是我的安眠药，昏暗的寝室，我几度在梦中被闹钟吵醒过来，关掉了闹钟之后却一瞬间再次睡着。我拼命的努力，挣扎着从睡梦中醒过来，好似进行了一场剧烈运动似的，全身冒汗。看着室友的电脑屏幕，我迷迷糊糊的问了他几点了，他告诉我已经三点了，我和他开玩笑似的说：“往后，我要是再睡午觉到三点，你就杀了我算了”。虽如此戏言，往后的日子里我依然常常睡到下午三点。&lt;/p&gt;
+&lt;p&gt;我坐在椅子上，收拾着要去自习的东西。走出寝室，不免有一阵寒栗，春风细雨，但依然带着一丝丝冷。在雨中，我撑着伞走到了图书馆，本很短的路程，在雨中却显得如此之长，好像走了半小时似的。春日不一定都是暖阳，就如同深秋并不一定都是寒风。一路走来，尽管有冰冷之感，从路边盛开的不知名的花，从图书馆门前抽芽的白玉兰，从愈渐稀薄的衣物当中，我还是感受到了春。&lt;/p&gt;
+&lt;p&gt;我拿出书籍，我总是这样，尽管知道自己不可能每一本都学到，却把一大堆书装进书包。思绪飞到了刚开学的时候，某天早上一二节课之后，我与两个好友决定一起去财大的“堕落街”满足口腹之欲，借着阳光，我们踩着自行车，从南湖的这边骑到了那边，一路上闻着春天的气息。我们笑着，聊着，到了财大的南湖湖滨，这里没有我们学校修缮的好，栏杆布满了铁锈，但我们却从另一个角度看到了我们的学校，从未觉得它如此美丽。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://zcnoke.com/images/spring_of_wuhan.jpg&#34; alt=&#34;spring_of_wuhan.jpg&#34; title=&#34;华中农业大学·落日&#34;&gt;&lt;/p&gt;
+&lt;p&gt;“堕落街”白天尽不开门，冷冷清清，与夜晚形成了强烈的对比。我们遂决定骑行至东湖。一路经过南湖大道，关山大道，到了华科，在华科吃过午饭之后，继续骑行，经过团山路，到了东湖磨山景区。“谁开湖寺西南路，草绿裙腰一道斜”。这里有一道堤，恰好也应了这句描写西湖春景的诗句。湖面平静，群花盛开，春游的人们说说笑笑，一切都好像充满了希望似的，我们暂时忘却了生活的苦痛。
+沿着东湖绿道，围绕东湖半圈，到了梨园。夏季这里有十里荷花，恋人们在此拍照留恋，老人们在这里运动锻炼，新婚夫妇们在这城市森林中拍摄婚纱照；这洁白的婚纱，穿透树林的阳光，可以想象到未来他们幸福的模样，几年后带着小孩儿，几十年后，白发苍苍携手游湖。&lt;/p&gt;
+&lt;p&gt;有些许的流汗，但一个下坡路，却马上让我们感觉到了凉爽。听涛景区的门口既是一个黄鹂小区，黄鹂校区紧邻着黄鹂路与东湖。我想象着自己是在这里长大的，当我还是个小孩儿时便知道东湖，爸妈常常带着我来东湖，我闻得出四季的变化，春天的味道不同与秋天的味道。万家灯火，我渐渐的长大，接受了自己的平凡，过着平凡的生活，上着平凡的大学，找到平凡的工作，但东湖总在那儿，一直未变。
+我们顺着黄鹂路，就到了湖北省博物馆，即使去过，但我提意我们可以进去看看，马上就是四点闭馆时间，我们赶紧把车一停，便进去了。楚虽三户，亡秦必楚，楚国文化是一个璀璨的星，那是最好的年代，百家争鸣，百花齐放。那也是最坏的时代，群雄逐鹿，诸侯争霸。&lt;/p&gt;
+&lt;p&gt;经中南路，丁字桥，书城路又回到了我们的学校，闻到了家常菜的味道，肚子饿的咕咕叫，到了华农西苑食堂，吃了晚饭，土豆丝，炒菜。没有哪个时刻像现在这样想吃到家里的菜。
+夜晚又去了图书馆，但身体的累令我马上就睡着了，醒来的时候已经是晚上九点了。我收拾完了所有的书，回了寝室。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/hzau/">life\hzau\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/hzau/">狮子山</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/zju/">江城</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>论爱情——《我的父亲与母亲》观后感</title>
+                <link>https://zcnoke.com/life/film/talk_about_love/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/film/talk_about_love/</guid>
+                <pubDate>Sat, 04 Jan 2020 20:27:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;这是一部画面极为美丽的电影，勾起了我对于北方农村的向往之情。河北省承德市丰宁满族自治县，影片的拍摄之地，完全满足了南方人对北方的幻想，将我完全带入了影片当中，仿佛自己也是在华北平原生活似的。读万卷书，行万里路，北京无法完全代表广袤的中国北方——这是一片流淌着华夏文明血液的地方，在当前唯金钱至上的时代，这里不仅仅在经济上屡被轻视，在文化上更是处于弱势，我们常常忘记了，华夏文明就起源于这里。透过影片，我能够看到那种不同于江南、岭南的常常被忽视的中国味。在消费主义盛行的今天，我们很少去关注文化，去北方旅游可能仅仅只意味着去了一趟北京，去了一趟故宫，而不会去到丰宁这样一个地方，去体会当地的风土人情。&lt;/p&gt;
+&lt;p&gt;上述是一点点题外话。很多人说这是一部最为张艺谋式的爱情篇，剧情非常简单（可能这也是它在豆瓣上只有8.1分的原因），没有感天动地的情节，有的只是平淡。影片中最为感动我的地方，是招娣在风雪中等了长余一整天，即使病倒了，也要发烧在寒雪当中走去县城寻找长余。这种爱情当中的奋不顾身，是浪漫而又真实的，是最易于引起人们共鸣的，因为对于美好爱情的向往是人的天性。这部电影，也引起了我对爱情的思考，这一直是古往今来文人骚客们所热衷的话题。&lt;/p&gt;
+&lt;p&gt;人们最为缺乏什么，便最会去表述什么。东西方文化差异巨大，但其中一个共通点就是东西方文学、艺术中歌颂最多描述最多的便是爱情。孟姜女能够哭到长城，梁祝能够双双化蝶，牛郎织女为见面能够跨越银河，七仙女为了董永能够放弃神仙的身份。这些还都仅仅是民间口头传诵的艺术。《诗经》当中，多半诗歌是描写爱情，古诗十九首，也基本都是与爱情相关的，《聊斋志异》当中，聂小倩和宁采臣能够跨越生死的距离，相爱相知。西方文化中，此类爱情故事更是数不胜数。这些故事也都有一个共同的特点，那就是大多以悲剧结尾。为什么呢？可能是这些故事都仅仅表达了人们对爱情的向往，但人们并不相信，能够有两个相互爱慕之人，长长久久，或者说人们并不奢望两个相互爱慕之人，能够长长久久。&lt;/p&gt;
+&lt;p&gt;爱情这个话题其实非常的复杂，它是否真实的存在都能够引起很大的争议，就如哲学当中的其他观念一样。它可能并不存在，刘易斯的《自私的基因》给了我们看待问题的另外一个视角，我们常常以为自己是自己的主人，我们的思想是自由的。但其实并不是，我们可能只不过就是基因的外在表现而已，我们的很多行为仅仅只是基因为了传承自己而做出的，为什么长辈们会催婚，因为他们的基因害怕自己无法得到传承，所以长辈们会通过各种手段要求你一定要结婚，至于你幸福与否，这另说（即使他们自己的婚姻可能是非常的不幸的），由此可见基因的强大的力量。性欲更是一种外在的表现，没有几个人能够不被性欲所控制，而性的目的也仅仅只是将基因传承下去，或许有人会反驳说：性是为了获得快感，而不是为了繁衍。但反过来想，快感可能就是为了促进你繁衍而出现的。所以，究竟什么是爱情，爱情是否存在，或许我们的“爱情”不过就是为了繁衍而出现的？这是一个有千万种回答的问题。康德猛烈的抨击过性，叔本华更是认为性是人堕落的根源，一个有思想的人，不应该被性所影响，所以康德、叔本华二人终生未婚，因此，爱情与性的关系也是值得探讨的，柏拉图式爱情（我不知道这和柏拉图究竟有什么关系）存在与否也值得商榷。&lt;/p&gt;
+&lt;p&gt;爱情的短效性，可能也是对它存在的一种否定。情到深处情转薄，有说法说人在恋爱当中分泌的多巴胺最多只能持续7个月（来源存疑），在这之后，便会是恋爱的瓶颈期。为什么初恋是人们常常怀念的，因为那是得不到的，那是已经逝去的。日本的一部记录片《人生果实》讲述一对老夫老妻从青年时便相伴至老，一场美好的爱情。但我看到的却是亲情的模样，爱情的热烈，激情都很难一直保持下去，所以许多的爱情最终都演变成了亲情，或是变成了相见不如不见，相看两生厌的地步。&lt;/p&gt;
+&lt;p&gt;而对于爱情的界限的问题，也是值得思考的，究竟什么是爱情，如果双方的付出并不平等能否算是爱情。异性间的爱慕是爱情，同性间的爱慕能否算是爱情？如果同性间的爱慕算是爱情的话，那么人与动物，与物品之间声称产生了爱慕，这能否算是爱情，我们应该如何来看待这些爱情？当前的社会，亟需要一种新的思想来指导我们看待这些问题，这也是为什么我认为同性婚姻平权无法成功的原因之一，因为他们缺乏系统的思想，缺乏有力的领导，2019年11月的《民法总则》意见征集的时候，更爆出了某些人在同性婚姻合法中夹带代孕合法化，这是目前的伦理学完全无法接受的。没有系统的思想指导，同性平权包括女性平权都是很难成功的，只会惹得人们心生厌恶之情（“异性只为繁衍生息，同性才是真爱”以及艾滋高危的印象、提倡女性特权的田园女权），激化社会矛盾。回到我们刚才的问题，“SM”现象也很值得探讨，为什么会出现这种现象，以及这是否属于爱情，还是单纯的仅为释放欲望，“SM”与同性恋的区别在哪里，这种区别并不是说对象、方式上的区别，而是为什么可以承认、接受同性恋，而无法承认、接受“SM”？即使是在同性婚姻合法的欧洲、北美国家，“SM”依然极为富有争议，我们应该如何看待？&lt;/p&gt;
+&lt;p&gt;前段时间，在新编著的《民法总则》进行意见征集的时候，有许多人呼吁大家提交关于同性婚姻的意见，我却认为这在中国目前是不可能实现的。我为什么如此认为？在异性婚姻中，大多数人也并不是因为爱情而结婚，可能更多的是对于现实的屈从，由DNA使然的繁衍生息的本能，以及结合成利益共同体以便于在社会上生存。恩格斯在《家庭、私有制和国家的起源》当中提到：“买卖婚姻的形式正在消失，但它的实质却在愈来愈大的范围内实现，以致不仅针对妇女，而且对男子都规定了价格：不是根据个人品质，而是根据财产。当事人双方的互相爱慕高于一切而成为了婚姻基础的这种情况，在统治阶级中自古以来都没有的。至多只是在浪漫事迹中，或在不受重视的被压迫阶级中才有这样的事情。”（柏拉图的《理想国》中也具有类似的观点，柏拉图认为，要取消家庭，所有的孩子由社会共同抚养，人之所以成为人，是因为社会而不是家庭）因此，为了虚无缥缈的忠贞长久的爱情，更何况还是同性，而通过一条与中国传统儒家思想相违背，且不利于解决当前人口老龄化的法律，这是不可能的事情。在当前的中国，离婚率达到了44%，即使通过了同性婚姻法案，我相信同性婚姻离婚率只会更高而不会低。当然，我本人是坚定的平权主义者，我支持女性、性少数群体的正当权利，支持无论肤色、人种、信仰、性别、性取向等天生因素不同的所有人都享有同样的权利与自由。&lt;/p&gt;
+&lt;p&gt;不过，我们也大可不必如此之悲观，按照马克思主义的视角，只要我们能够实现共产主义，阶级便会不复存在，作为调和阶级矛盾而出现的国家便也会消失灭亡。等到这个时候，许多的问题便迎刃而解了，我们结合不再是为了形成某种利益共同体，我们能够自由的选择想要成为的人，自由的选择伴侣，结婚这种形式或许也将不复存在。我采取一种中立的态度看待爱情，它是存在的，但并不会是长久的，我们大可不必感伤它的易逝，只要存在过就是有意义的，值得终生怀念的。虽然有可能大多数人都碰不到互相爱慕的人，但还是祝愿天下所有人都能够：愿得常巧笑，携手同车归。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/film/">life\film\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/film/">电影</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/love/">爱情</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>休谟关于因果论的批判</title>
+                <link>https://zcnoke.com/life/philosophy/reason-result/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/philosophy/reason-result/</guid>
+                <pubDate>Sat, 07 Dec 2019 20:27:18 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;根据对休谟的经验主义认识论的这种讨论，我们将更仔细地考察一下它对于因果性概念的批判。我们可以说，当我们无数次观察不同撞球之间是如何以机械力相互作用之后，我们可以从这个经验出发知道这些球在未来将如何运动。我们可以发现一些因果联系规律，比方说在一个平面上，当 A球以这种或那种速度和质量撞击具有这个或那个速度和质量的 B球的时候，会发生什么。原因和结果之间的联系的规律告诉我们，如果某个原因发生的话，必然将发生什么结果。休谟讨论这样的观点，并问道，在他的经验主义知识论的基础上，我们是否有可能实际上知道这样的因果规律。休谟说，当我们讨论原因的时候，我们认为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;某物随另外一物而来；&lt;/li&gt;
+&lt;li&gt;在两个现象之间有接触；&lt;/li&gt;
+&lt;li&gt;随这种接触而来的事情必然发生。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;换句话说，在休谟看来，原因的概念具有下列特征：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;相继性；&lt;/li&gt;
+&lt;li&gt;接触性；&lt;/li&gt;
+&lt;li&gt;必然性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;但这我们是怎么知道的？什么给了我们这个观念？根据经验主义的认识论，知识仅仅以经验为基础。诸事件的相继性是可以看见的；也就是说，相继性的观念之所以是知识，是因为这个观念建立在经验的基础上。接触性，比如在 A球和 B球之间的，也是可以看见的。这里我们也有知识。而且，我们还可以看到，如果我们持续地进行新的尝试，相继性和接触性是可以一再重复的。换句话说，我们对一种不断重复性具有知识。至此为止一切都无问题。但是我们怎么知道，所发生的事情的发生是具有必然性的（当一个球撞击另一个球的时候）呢？什么经验告诉我们这个必然性？我们能看见这个必然性吗？我们怎么看见？一道红光？显然不是。我们能听见必然性吗？比方说，“嗡”地一响？当然也不能。必然性也不是任何我们可以感觉到或嗅到的东西，或以任何其他方法对之有简单感觉印象的东西。因此我们根本无法对必然性有任何知识。&lt;/p&gt;
+&lt;p&gt;我们可以提出异议说，即使我们可能并没有从简单感觉印象出发而具有原因和结果的关系中的必然性的知识，我们仍然可以通过归纳而具有关于这种必然性的知识：当一个球在一个平面上撞击另一个（具有同样质量的）处于静态的球的时候，我们总是观察到那滚动的球变成静止的了，而那原先静止的球开始以第一个球同样的速度滚动。我们可以多次重复这个经验并观察这例因果联系。因此，我们归纳地推论出这将永远发生，它必定永远如此。也就是说，这种因果联系是必然发生的，因而我们知道，未来的同样的“撞击”将具有同样的结果。休谟的回答很简单：我们知道的只是我们已经经验的事情。但过去和现在的事例我们并非全都经验过，未来的经验我们一点儿也没有。因此，我们不能说我们知道某事将在未来发生。&lt;/p&gt;
+&lt;p&gt;重要的是要记住，什么是休谟说了的，什么是休谟没有说的。休谟并没有说在原因和结果之间没有必然联系，他只是说我们不可能知道这样一种可能的必然性。换句话说，休谟的命题是认识论的，而不是本体论的。而且，他并没有说我们不应该预期那些球在未来将按照迄今为止的运动方式而运动。休谟只是说我们不可能知道这一点，这里“知道”的含义是在他所理解的意义上的。从埃菲尔铁塔上往下跳，指望我们不会像从前一直发生的那样急速下坠而是轻轻飘落在塞纳河的彼岸（“我们并不因为迄今为止人都摔死了就知道我们在未来亦将摔死”），休谟当然不会认为这样做是明智的。休谟的观点是认识论的：我们必须把不同种类的知识区别开来。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;直接经验。我们对我们直接经验的或曾经直接经验过的具有知识。但是这样一种特殊的经验并不告诉我们因果联系必定起作用。这种经验与未来并无关系。&lt;/li&gt;
+&lt;li&gt;归纳。如果根据有限数量的直接经验我们就主张某事将来必定发生，我们所说的会多于我们实际知道的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;但这并不意味着我们预期它将发生就是不明智的。休谟认为，关键是要把逻辑性洞见和经验性洞见明确区分开来。如果我们说“ A ＞ B并且 B ＞ C，那么 A ＞ C”，我们完全确定地知道这必定如此。在前提和通常的推论规则给定的情况下，“ A ＞ C”是具有逻辑必然性的。逻辑洞见因而是百分之一百确定的。但经验知识却并非如此。在某种意义上可以想象 A球撞击 B球（在同样的初始条件下）有时将导致不同结果——比方说 B球一下子弹跳起来，而不是开始在平面上滚动——可以想象两个球在未来将与它们迄今为止的运动方式不同。新的经验将表明先前的观察是错误的，这是可以想象的。&lt;/p&gt;
+&lt;p&gt;我们的结论如下。逻辑知识是百分之一百确定的，但它对世界上任何事情都一无所说。经验知识就世界上的事情告诉了我们一些，但并不是百分之一百确定的。&lt;/p&gt;
+&lt;p&gt;总之，对休谟来说，仅仅存在这样两种形式的知识：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;逻辑知识，它涉及的是概念之间的关系（而不是世界）；&lt;/li&gt;
+&lt;li&gt;经验知识，它的基础是简单的感觉印象（内部的和外部的）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;而且，在休谟看来，因果性的概念是由如下成分构成的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;相继性 |&lt;/li&gt;
+&lt;li&gt;接触性 | ---&amp;gt; 重复性&lt;/li&gt;
+&lt;li&gt;必然性 |&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果这个因果观是代表有关世界的知识，那么它的全部成分就都必须来自经验。但图表中第三项即“必然性”看来并非如此。必然性的观念不可能来自简单的感觉印象，而且归纳推理——比方说，未来将与已观察到的过去相像——并不给我们真正意义上的知识。&lt;/p&gt;
+&lt;p&gt;因此，对休谟来说，下一个问题是，这个包含着一个不代表经验主义所理解的知识的成分的因果观，我们是怎么会拥有的。答案说到底是心理学的：当事件一再以同样方式发生时，我们就形成了这样的预期：同样的过程在未来也将发生。创造出因果联系方面的必然性观念的，就是我们的这种预期。这样，我们看到休谟的认识论是如何反对那种认为经验科学使我们百分之一百确定地洞察必定不仅适用于过去、也适用于未来的普遍规律的观念：在休谟看来，没有理由、没有合理直觉使我们能把握自然界必然的不可变化的原理——就好像没有理由使我们能把握普遍的道德规范一样。我们可以得出结论说，我们关于因果关系所知道的东西是建立在经验（感性知觉）基础上的。从这个知识来源我们无法知道因果联系是必然发生的，因为我们对“必然性”并无感知。我们也无法知道（也就是确定地知道）过去被观察的条件在未来是否将适用。&lt;/p&gt;
+&lt;p&gt;但是休谟并没有停留在对原因和理性概念的这种批判的经验主义的分析上。他认为导致我们关于事件必然发生的观念的是我们的预期，与这个观点相一致，休谟强调他所谓的自然信念。借助于自然信念，我们赋予我们周围的世界和事件以秩序，从而我们可以相当方便地进行生活——即使理性和我们严格意义上所能知道的并没有许多早先的哲学家们所认为的那么有帮助。休谟的实践常识概念，或自然信念概念，是一个基本概念，它一再出现于他的知识论、道德哲学和政治理论中（他谈论公平的通感和同情）。这里有必要补充说，休谟，作为一位 18世纪哲学家，对科学研究和科学进步持肯定态度。虽然在认识论中他拒绝认为有可能得到绝对确定的结果，但他强调实验科学中的逐步的、自我纠正的进展的价值。&lt;/p&gt;
+&lt;p&gt;​																																																				------选自《西方哲学史》&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;休谟关于因果论的批判，体现了他对自然科学的认同。我们不可能完全认识这个世界，不存在某种真理。我认为整个自然科学都建立在归纳的基础上，因此才会发生牛顿的经典力学为广义相对论、量子力学所推翻。因为过去的经验无法预测未来发生的事情，当前遵守经典力学的现象，未来可能也会不适用，自然科学的发展就是个如是的过程。正是因为我们只有两类知识，一个是逻辑演绎推理带来的知识，但这实际上并没有给我们增加新知识，因为推理的结果都是蕴含在了前提里面。比方说著名的三段论：“所有人都会死，苏格拉底是人，所以苏格拉底会死。”苏格拉底会死这个结论实际上已经蕴含在了前提当中，所以演绎是不会带给我们新知识的。而对于归纳来说，过去和现在的经验都不能适用于未来，造成因果论的失效，因此我们无法掌握真理，准确的说，真理根本不存在。凡利用理性而获得的知识都必须追溯到我们的直接感官经验，凡与法律、道德等相关的都必须追溯到我们的感情，因此也不存在自然法，不存在普遍适用的道德原则。&lt;/p&gt;
+&lt;p&gt;近几十年，有非常多的物理学家投身于弦理论的研究当中，如果能够得到验证，那我们对宇宙的认识将会更进一步，即使我们无法完全认识这个世界，但她依然是迷人的，我们依然对她充满着热情。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/philosophy/">life\philosophy\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/philosophy/">哲学</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>撰写中</title>
+                <link>https://zcnoke.com/tech/machinelearning/coding/</link>
+                <guid isPermaLink="true">https://zcnoke.com/tech/machinelearning/coding/</guid>
+                <pubDate>Wed, 06 Nov 2019 23:43:17 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;h1 id=&#34;还在撰写中等deadline过去再更新&#34;&gt;还在撰写中，等deadline过去再更新&lt;/h1&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/tech/machinelearning/">tech\machinelearning\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>坡县游学记</title>
+                <link>https://zcnoke.com/life/hzau/singapore/</link>
+                <guid isPermaLink="true">https://zcnoke.com/life/hzau/singapore/</guid>
+                <pubDate>Thu, 12 Jul 2018 22:10:31 &#43;0800</pubDate>
+                
+                    <author>yuhao.zhao@zju.edu.cn (Yuhao Zhao)</author>
+                
+                <copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright>
+                
+                    <description>&lt;p&gt;至今仍然记得被新加坡国立大学暑期夏令营录取为营员时的兴奋心情。清明节假期，我搭小阿姨的便车，收到了录取邮件，今日忽然想起当时曾经写过这样的一篇随笔，特翻出记录于此。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://zcnoke.com/images/wuhan_airport.jpg&#34; alt=&#34;wuhan_airport.jpg&#34; title=&#34;武汉·天河机场&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;20180712&#34;&gt;2018.07.12&lt;/h2&gt;
+&lt;p&gt;凌晨在香港转机，第一次出境，当时内心其实很想要香港在我的护照上留个戳，但最后也没有留下。很喜欢香港人说普通话的感觉。那里的员工也都很热心，很耐心的回答了我的问题。&lt;/p&gt;
+&lt;p&gt;在香港国际机场和重庆大学的一个学姐会面，一起等飞机。中间逛了下香港国际机场，感觉没有什么可以买的，可能是因为是深夜的原因，大多数的店面都关门了，不过也看到了说什么习帝的书。后来在位置上睡觉，因为把腿架在另一条腿上，醒来的时候觉得腿要废掉了。&lt;/p&gt;
+&lt;p&gt;登上飞机便一直在睡觉，醒来的时候已经快要到达樟宜机场了。其实内心有一点点的难过。因为旅途上我不需要考虑任何问题，而下了飞机之后就有许许多多的事情需要去做，去想。飞机上的早餐也没有吃，直接塞到了包里面。填写了入境卡之后便入了境，在拿行李的地方和学姐会面了。我们出门打了量车去新加坡国立大学，樟宜机场打的的秩序比国内的要好。&lt;/p&gt;
+&lt;p&gt;的士司机非常的好，中文英文都很流利，人很温和。我们报给了邮编号码之后就坐着车直奔国立大学。下车的地方便是曹嘉炜学长发在群里的地方。非常的漂亮，我们两个人看着地图，又不好意思问路，在那里上上下下，引得旁边一个大叔，非华人的大叔，非常的想笑，走过来问我们是要去哪里，为什么一直在上上下下，我们和他说了之后他带我们来到了宿舍管理办公室，拿了我们的衣服和一些卡之类的东西，然后好心的大叔又带我们到了相应的地方。&lt;/p&gt;
+&lt;p&gt;本来想在寝室睡觉，但是还是很犹豫，又跟着去了，结果没把我给困死，根本没怎么听进去，下午的时候又来了城市文化游览，去了小印度，牛车水和一个什么地方忘记了。非常的累，也没有什么感觉，在牛车水的地方用了出国以来用的第一份钱，在一家名叫“南洋咖啡”的店子喝了一杯饮料，吃了些东西。味道并不是很好，还没有国内的饮料好喝。但是也算是体验一下。在牛车水的一个寺庙里面有超级多的华人齐颂经文，我觉得如果中国大陆的英文水平也能有这么高，那就是相当的好了，就无所谓雅思托福之类的了。&lt;/p&gt;
+&lt;p&gt;在最后一个景点时候，小印度的时候我和他们分开了，买了个椰子，然后去了苹果专卖店，买了个耳机。最后手机没电了，在苹果专卖店冲了会儿电。在傍晚的时候总算是回到了梦寐以回的寝室，回到寝室之后赶紧躺着。休息了一会儿，洗个澡，然后就睡觉了。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://zcnoke.com/life/hzau/">life\hzau\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/hzau/">狮子山</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/zju/">江城</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://zcnoke.com/tags/singapore/">星加坡</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>
